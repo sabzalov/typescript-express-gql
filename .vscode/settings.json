@@ -1,0 +1,14 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/dist": true,
+        // ".gitignore": true,
+        ".npmrc": true,
+        ".yarnrc": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/dist": true
+    }
+}
