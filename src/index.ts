@@ -1,15 +1,12 @@
 import * as express from 'express';
 import * as graphqlHTTP from 'express-graphql';
 import { buildSchema } from 'graphql';
-import * as baseSchema from './schema.gql';
+import { resolver } from './test/resolvers';
+import * as baseSchema from './test/schema/schema.graphql';
 
 const app = express();
 
 const schema = buildSchema((baseSchema as any));
-
-const resolver = {
-    info: () => 'I have come to talk to you again'
-}
 
 app.use('/graphql', graphqlHTTP({
     schema: schema,

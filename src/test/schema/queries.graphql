@@ -1,0 +1,7 @@
+# import Item from './item.graphql'
+
+type Query {
+    info: String!
+    test: String!
+    items: [Item!]!
+}

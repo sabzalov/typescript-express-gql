@@ -1,9 +1,9 @@
 declare module "*.gql" {
   const value: any;
-  export default value;
+  export = value;
 }
 
 declare module "*.graphql" {
   const value: any;
-  export default value;
+  export = value;
 }

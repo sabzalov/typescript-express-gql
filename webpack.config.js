@@ -15,20 +15,21 @@ module.exports = {
     module: {
         rules: [
             {
+                exclude: /node_modules/,
                 test: /\.tsx?$/,
                 use: 'ts-loader',
             },
             {
-                test: /\.(graphql|gql)$/,
-                loader: 'raw-loader',
-            }
+                exclude: /node_modules/,
+                test: /\.graphql$/,
+                use: 'graphql-import-loader'
+            },
         ]
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
     ],
     resolve: {
-        mainFields: ["main", "module"],
         extensions: [ '.tsx', '.ts', '.js', '.gql', '.graphql' ]
     }
 };
