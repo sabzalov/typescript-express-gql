@@ -16,6 +16,9 @@ const data = [
 ];
 
 export const resolver = {
-    info: () => 'hello darkness',
-    items: () => data,
+    Query: {
+        info: () => 'hello darkness',
+        items: () => data,
+    },
+    Item: Item,
 }
